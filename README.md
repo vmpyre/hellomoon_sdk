@@ -34,7 +34,8 @@ For example, you can use the `collection_stats()` method of the `NFTSummary` cla
 >> solana_monkey_business = "d515305e2b1de0026b5bf49fbb12e107
 >> nft_api.collection_stats(helloMoonCollectionId=solana_monkey_business)
 ```
-**That's it!* 
+*That's it!* 
+
 Response:
 ```json
 {
@@ -90,7 +91,7 @@ You can view the class methods below:
 - [market_sales_over_time()](https://hellomoon.readme.io/reference/post_v0-nft-sales-per-market-daily-1)
 
 
-*See the Official Hello Moon documentation for additional information: https://hellomoon.readme.io/ *
+*See the Official Hello Moon documentation for additional information: https://hellomoon.readme.io/*
 
 ## Contribution
 Feel free to open issues, pull requests and submit feedback. We appreciate your help!

@@ -6,7 +6,7 @@ def _make_post_request(url, api_key, payload):
         "content-type": "application/json",
         "authorization": f"Bearer {api_key}"
     }
-    response = requests.post(url, json=payload, headers=headers)
+    response = requests.post(url=url, json=payload, headers=headers)
     if response.status_code == 200:
         return response.json()
     else:

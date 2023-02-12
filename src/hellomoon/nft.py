@@ -17,16 +17,12 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/collection/listing/candlesticks"
         url = self.base_url + path
-        payload = {
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "startTime": startTime,
-            "granularity": granularity,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-collection-mints-1
@@ -38,15 +34,12 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/collection/mints"
         url = self.base_url + path
-        payload = {
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "nftMint": nftMint,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-collection-name-1
@@ -58,15 +51,12 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/collection/name"
         url = self.base_url + path
-        payload = {
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "collectionName": collectionName,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-listing-status-1
@@ -83,20 +73,13 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/listing-status"
         url = self.base_url + path
-        payload = {
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "nftMint": nftMint,
-            "isListed": isListed,
-            "marketplace": marketplace,
-            "price": price,
-            "blockTime": blockTime,
-            "seller": seller,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
+
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-listings-1
@@ -113,20 +96,13 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/listings"
         url = self.base_url + path
-        payload = {
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "instructionName": instructionName,
-            "transactionId": transactionId,
-            "blockId": blockId,
-            "nftMint": nftMint,
-            "market": market,
-            "blockTime": blockTime,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
+
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-mint-information-1
@@ -138,15 +114,12 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/mint_information"
         url = self.base_url + path
-        payload = {
-            "nftMint": nftMint,
-            "nftCollectionMint": nftCollectionMint,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-mints-by-owner-1
@@ -160,17 +133,12 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/mints-by-owner"
         url = self.base_url + path
-        payload = {
-            "nftMint": nftMint,
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "ownerAccount": ownerAccount,
-            "nftCollectionMint": nftCollectionMint,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-sales-primary-1
@@ -187,20 +155,12 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/sales/primary"
         url = self.base_url + path
-        payload = {
-            "nftMint": nftMint,
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "transactionId": transactionId,
-            "mintProgram": mintProgram,
-            "payer": payer,
-            "paymentMint": paymentMint,
-            "wallet": wallet,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-sales-secondary-1
@@ -218,19 +178,10 @@ class NFT:
         page: int=None,
         paginationToken: str=None
         ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
         path = "/nft/sales/secondary"
         url = self.base_url + path
-        payload = {
-            "nftMint": nftMint,
-            "helloMoonCollectionId": helloMoonCollectionId,
-            "buyer": buyer,
-            "seller": seller,
-            "marketplace": marketplace,
-            "price": price,
-            "blockTime": blockTime,
-            "blockId": blockId,
-            "limit": limit,
-            "page": page,
-            "paginationToken": paginationToken
-        }
         return _make_post_request(url, self.api_key, payload)
