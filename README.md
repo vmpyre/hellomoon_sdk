@@ -65,9 +65,10 @@ The SDK provides functionality for interacting with all endpoints mentioned here
 ## Documentation
 You can view the class methods below:
 ### NFT
-- [collection_candlesticks()](https://hellomoon.readme.io/reference/post_v0-collection-listing-candlesticks)
+- [collection_candlesticks()](https://hellomoon.readme.io/reference/post_v0-nft-collection-floorprice-candlesticks)
 - [collection_mint_mapping()](https://hellomoon.readme.io/reference/post_v0-nft-collection-mints-1)
 - [collection_name_mapping()](https://hellomoon.readme.io/reference/post_v0-nft-collection-name-1)
+- [collection_volatility()](https://hellomoon.readme.io/reference/post_v0-nft-collection-volatility)
 - [listing_status()](https://hellomoon.readme.io/reference/post_v0-nft-listing-status-1)
 - [nft_listings()](https://hellomoon.readme.io/reference/post_v0-nft-listings-1)
 - [metaplex_metadata()](https://hellomoon.readme.io/reference/post_v0-nft-mint-information-1)
@@ -76,6 +77,7 @@ You can view the class methods below:
 - [secondary_sales()](https://hellomoon.readme.io/reference/post_v0-nft-sales-secondary-1)
 
 ### NFTSummary
+- [collection_daily_sales_stats()](https://hellomoon.readme.io/reference/post_v0-nft-collection-daily-sales-stats)
 - [collection_listing_stats()](https://hellomoon.readme.io/reference/post_v0-nft-collection-listing-1)
 - [collection_overlap()](https://hellomoon.readme.io/reference/post_v0-nft-collection-overlap-1)
 - [cumulative_nft_owners_over_time()](https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-cumulative-1)
@@ -84,7 +86,7 @@ You can view the class methods below:
 - [collection_holding_period()](https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-holding-period-1)
 - [collection_top_holders()](https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-top-holders-1)
 - [collection_program_usage()](https://hellomoon.readme.io/reference/post_v0-nft-collection-program-usage-1)
-- [collection_stats()](https://hellomoon.readme.io/reference/post_v0-nft-collection-stats-1)
+- [collection_stats_with_floor_price()](https://hellomoon.readme.io/reference/post_v0-nft-collection-stats-1)
 - [collection_mint_stats()](https://hellomoon.readme.io/reference/post_v0-nft-collection-stats-primary-sales-1)
 - [collection_washtrading_index()](https://hellomoon.readme.io/reference/post_v0-nft-collection-washtrading-1)
 - [marketplace_stats()](https://hellomoon.readme.io/reference/post_v0-nft-market-stats-1)

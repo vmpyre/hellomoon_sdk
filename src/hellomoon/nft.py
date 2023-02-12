@@ -7,7 +7,7 @@ class NFT:
         self.base_url = MAINNET_BASE_URL
         self.api_key = api_key
 
-    # https://hellomoon.readme.io/reference/post_v0-collection-listing-candlesticks
+    # https://hellomoon.readme.io/reference/post_v0-nft-collection-floorprice-candlesticks
     def collection_candlesticks(
         self, 
         helloMoonCollectionId: str, 
@@ -21,7 +21,7 @@ class NFT:
         arguments = locals()
         payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
 
-        path = "/collection/listing/candlesticks"
+        path = "/nft/collection/floorprice/candlesticks"
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
@@ -56,6 +56,22 @@ class NFT:
         payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
 
         path = "/nft/collection/name"
+        url = self.base_url + path
+        return _make_post_request(url, self.api_key, payload)
+
+    # https://hellomoon.readme.io/reference/post_v0-nft-collection-volatility
+    def collection_volatility(
+        self, 
+        helloMoonCollectionId: str, 
+        limit: int=None,
+        page: int=None,
+        paginationToken: str=None
+        ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
+        path = "/nft/collection/volatility"
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
@@ -110,6 +126,7 @@ class NFT:
         self, 
         nftMint: str=None, 
         nftCollectionMint: str=None,
+        verifiedCreator: str=None,
         limit: int=None,
         page: int=None,
         paginationToken: str=None

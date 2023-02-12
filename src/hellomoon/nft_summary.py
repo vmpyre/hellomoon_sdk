@@ -7,10 +7,26 @@ class NFTSummary:
         self.base_url = MAINNET_BASE_URL
         self.api_key = api_key
 
+    # https://hellomoon.readme.io/reference/post_v0-nft-collection-daily-sales-stats
+    def collection_daily_sales_stats(
+        self, 
+        helloMoonCollectionId: str=None, 
+        limit: int=None,
+        page: int=None,
+        paginationToken: str=None
+        ):
+        
+        arguments = locals()
+        payload = {key: value for key, value in arguments.items() if value is not None and key != "self"}
+
+        path = "/nft/collection/listing"
+        url = self.base_url + path
+        return _make_post_request(url, self.api_key, payload)
+
     # https://hellomoon.readme.io/reference/post_v0-nft-collection-listing-1
     def collection_listing_stats(
         self, 
-        helloMoonCollectionId: str, 
+        helloMoonCollectionId: str=None, 
         blockId: int=None,
         limit: int=None,
         page: int=None,
@@ -143,10 +159,11 @@ class NFTSummary:
         return _make_post_request(url, self.api_key, payload)
 
     # https://hellomoon.readme.io/reference/post_v0-nft-collection-stats-1
-    def collection_stats(
+    def collection_stats_with_floor_price(
         self, 
-        helloMoonCollectionId: str,
-        volume24Hr: float=None,
+        helloMoonCollectionId: str=None,
+        granularity: List[str]=None,
+        startTime: int=None,
         limit: int=None,
         page: int=None,
         paginationToken: str=None
