@@ -7,7 +7,7 @@ class NFTSummary:
         self.base_url = MAINNET_BASE_URL
         self.api_key = api_key
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-daily-sales-stats
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-daily-sales-stats
     def collection_daily_sales_stats(
         self, 
         helloMoonCollectionId: str=None, 
@@ -23,7 +23,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-listing-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-listing
     def collection_listing_stats(
         self, 
         helloMoonCollectionId: str=None, 
@@ -40,7 +40,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-overlap-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-overlap
     def collection_overlap(
         self, 
         helloMoonCollectionId: str, 
@@ -57,7 +57,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-cumulative-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-ownership-cumulative
     def cumulative_nft_owners_over_time(
         self, 
         day: str, 
@@ -73,7 +73,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-current-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-ownership-current
     def collection_current_owners(
         self, 
         helloMoonCollectionId: str, 
@@ -89,7 +89,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-historical-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-ownership-historical
     def collection_distinct_owners_over_time(
         self, 
         helloMoonCollectionId: str, 
@@ -106,7 +106,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-holding-period-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-ownership-holding-period
     def collection_holding_period(
         self, 
         helloMoonCollectionId: str, 
@@ -123,7 +123,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-ownership-top-holders-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-ownership-top-holders
     def collection_top_holders(
         self, 
         helloMoonCollectionId: str, 
@@ -142,7 +142,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-program-usage-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-program-usage
     def collection_program_usage(
         self, 
         helloMoonCollectionId: str, 
@@ -158,7 +158,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-stats-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-stats
     def collection_stats_with_floor_price(
         self, 
         helloMoonCollectionId: str=None,
@@ -176,7 +176,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-stats-primary-sales-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-stats-primary-sales
     def collection_mint_stats(
         self, 
         helloMoonCollectionId: str,
@@ -213,7 +213,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-market-stats-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-market-stats
     def marketplace_stats(
         self, 
         market: List[str],
@@ -229,7 +229,7 @@ class NFTSummary:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-sales-per-market-daily-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-sales-per-market-daily
     def market_sales_over_time(
         self, 
         market: List[str],
