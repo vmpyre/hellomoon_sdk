@@ -7,7 +7,7 @@ class NFT:
         self.base_url = MAINNET_BASE_URL
         self.api_key = api_key
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-floorprice-candlesticks
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-floorprice-candlesticks
     def collection_candlesticks(
         self, 
         helloMoonCollectionId: str, 
@@ -25,7 +25,7 @@ class NFT:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-mints-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-mints
     def collection_mint_mapping(
         self, 
         helloMoonCollectionId: str, 
@@ -42,7 +42,7 @@ class NFT:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-name-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-name
     def collection_name_mapping(
         self, 
         helloMoonCollectionId: str, 
@@ -59,7 +59,7 @@ class NFT:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-collection-volatility
+    # https://docs.hellomoon.io/reference/post_v0-nft-collection-volatility
     def collection_volatility(
         self, 
         helloMoonCollectionId: str, 
@@ -75,7 +75,7 @@ class NFT:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-listing-status-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-listing-status
     def listing_status(
         self, 
         helloMoonCollectionId: str=None, 
@@ -98,7 +98,7 @@ class NFT:
 
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-listings-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-listings
     def nft_listings(
         self, 
         helloMoonCollectionId: str=None, 
@@ -121,7 +121,7 @@ class NFT:
 
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-mint-information-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-mint-information
     def metaplex_metadata(
         self, 
         nftMint: str=None, 
@@ -139,7 +139,7 @@ class NFT:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-mints-by-owner-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-mints-by-owner
     def mints_by_owner(
         self, 
         nftMint: str=None, 
@@ -158,7 +158,7 @@ class NFT:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-sales-primary-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-sales-primary
     def primary_sales(
         self, 
         nftMint: str=None, 
@@ -180,7 +180,7 @@ class NFT:
         url = self.base_url + path
         return _make_post_request(url, self.api_key, payload)
 
-    # https://hellomoon.readme.io/reference/post_v0-nft-sales-secondary-1
+    # https://docs.hellomoon.io/reference/post_v0-nft-sales-secondary
     def secondary_sales(
         self, 
         nftMint: str=None, 
